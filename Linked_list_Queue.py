@@ -13,7 +13,6 @@ class Queue:
     def isEmpty(self):
         return self.front == None
 
-    # Method to add an item to the queue
     def EnQueue(self, item):
         new_item = Node(item)
 
@@ -23,7 +22,6 @@ class Queue:
         self.rear.next = new_item
         self.rear = new_item
 
-    # Method to remove an item from queue
     def DeQueue(self):
 
         if self.isEmpty():
@@ -54,7 +52,7 @@ class Queue:
             if y == "yes":
                 while True:
                     if self.isEmpty() is False:
-                        x = raw_input("Do you want to delete " + self.front.data)
+                        x = raw_input("Do you want to delete ''" + self.front.data+ "'' ")
                         if x == "yes":
                             self.DeQueue()
                         elif x == "no":
@@ -63,7 +61,7 @@ class Queue:
                         else:
                             print "please enter yes or no"
                     else:
-                        print "there are no items to delete"
+                        print "There are no items to delete"
                         print "The list is empty"
                         exit()
             elif y == "no":
@@ -80,9 +78,6 @@ class Queue:
                 temp = temp.next
         else:
             print "There are no data"
-
-
-
 
 
 def main():
